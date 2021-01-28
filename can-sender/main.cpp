@@ -23,7 +23,7 @@ int main()
 {
     printf("This is a CAN send example on Mbed OS %d.%d.%d.\n", MBED_MAJOR_VERSION, MBED_MINOR_VERSION, MBED_PATCH_VERSION);
 
-    t.attach(&onTick,0.2);      // periodically call the onTick function
+    t.attach(&onTick,200ms);      // periodically call the onTick function
 
     while (true)
     {
