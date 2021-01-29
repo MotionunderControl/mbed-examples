@@ -1,0 +1,16 @@
+{
+    "BLUEPILL": {
+        "inherits": [
+            "MCU_STM32F103x8"
+        ],
+        "macros_add": [
+            "STM32F103C8"
+        ],
+        "device_has_add": [
+            "USBDEVICE"
+        ],
+        "target.clock_source": "USE_PLL_HSE_XTAL",
+        "target.clock_source_usb": "1",
+        "device_name": "STM32F103C8"
+    }
+}
