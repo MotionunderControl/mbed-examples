@@ -1,6 +1,6 @@
-# CAN receiver
+# USB serial
 
-CAN communication example application for the STM32 bluepill using the mbed framework. A custom target was made to make the bluepill work with mbed OS 6.6.0.
+USB serial example application for the STM32 bluepill using the mbed framework. A custom target was made to make the bluepill work with mbed OS 6.6.0.
 
 # Howto
 

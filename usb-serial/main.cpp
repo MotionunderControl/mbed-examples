@@ -3,6 +3,7 @@
 
 DigitalOut led1(LED1);      // Onboard LED
 USBSerial serial(false);    // Non-blocking
+//CAN can(PB_8, PB_9);        // Onboard CAN channel connected to TI SN65HVD230 transceiver
 Ticker t;                   // Ticker with microsecond resolution
 
 // Redirect console output to usb-serial port
