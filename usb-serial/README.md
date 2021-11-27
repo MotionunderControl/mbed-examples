@@ -4,8 +4,16 @@ USB serial example application for the STM32 bluepill using the mbed framework. 
 
 # Howto
 
-Project can be built using mbed Studio or from the command line:
+Project can be built using mbed Studio or from the command line.
 
-`mbed compile -t GCC_ARM`
+## MBED-CLI 1
+
+Obtain the mbed-os folder once with
+
+`mbed deploy`
+
+Then compile the project with
+
+`mbed compile -t GCC_ARM -m BLUEPILL`
 
 Flashing the binary to the target and debugging can be done with ST-LINK v2
