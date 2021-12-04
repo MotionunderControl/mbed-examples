@@ -1,0 +1,16 @@
+{
+    "F3BASE": {
+        "inherits": [
+            "MCU_STM32F303xC"
+        ],
+        "macros_add": [
+            "STM32F303CC"
+        ],
+        "device_has_add": [
+            "USBDEVICE"
+        ],
+        "target.clock_source": "USE_PLL_HSE_XTAL",
+        "target.clock_source_usb": "1",
+        "device_name": "STM32F303CC"
+    }
+}
