@@ -9,8 +9,10 @@
         "device_has_add": [
             "USBDEVICE"
         ],
-        "target.clock_source": "USE_PLL_HSE_XTAL",
-        "target.clock_source_usb": "1",
+        "overrides": {
+            "clock_source": "USE_PLL_HSI",
+            "lse_available": 0
+        },
         "device_name": "STM32F303CC"
     }
 }
