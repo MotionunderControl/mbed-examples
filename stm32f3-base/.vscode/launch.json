@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/BUILD/F3BASE/GCC_ARM-DEBUG/${workspaceRootFolderName}_application.elf",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
+            "debugServerArgs": "-f interface/stlink.cfg -f target/stm32f3x.cfg",
+            "serverLaunchTimeout": 20000,
+            "filterStderr": true,
+            "filterStdout": false,
+            "serverStarted": "starting gdb server",
+            "preLaunchTask": "mbed",
+            "setupCommands": [
+                { "text": "-target-select extended-remote localhost:3333", "description": "connect to target", "ignoreFailures": false },
+                { "text": "-file-exec-and-symbols ${workspaceRoot}/BUILD/F3BASE/GCC_ARM-DEBUG/${workspaceRootFolderName}_application.elf", "description": "load file", "ignoreFailures": false},
+                { "text": "-interpreter-exec console \"monitor reset\"", "ignoreFailures": false },
+                { "text": "-interpreter-exec console \"monitor halt\"", "ignoreFailures": false },
+                { "text": "-interpreter-exec console \"monitor arm semihosting enable\"", "ignoreFailures": false },
+                { "text": "-target-download", "description": "flash target", "ignoreFailures": false }
+            ],
+            "logging": {
+                "moduleLoad": true,
+                "trace": true,
+                "engineLogging": true,
+                "programOutput": true,
+                "exceptions": true
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "MIDebuggerPath": "/opt/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb",
+                "debugServerPath": "/usr/local/bin/openocd"
+            }
+        }
+    ]
+}
