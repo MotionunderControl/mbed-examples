@@ -21,13 +21,13 @@ void onTick(void) {
 
 int main()
 {
-    t.attach(&onTick,200ms);      // periodically call the onTick function
+    t.attach(&onTick,500ms);      // periodically call the onTick function
 
-    //printf("STM32F3base example application on Mbed OS %d.%d.%d.\n", MBED_MAJOR_VERSION, MBED_MINOR_VERSION, MBED_PATCH_VERSION);
+    printf("STM32F3base example application on Mbed OS %d.%d.%d.\n", MBED_MAJOR_VERSION, MBED_MINOR_VERSION, MBED_PATCH_VERSION);
 
     while (true)
     {
-        //printf("Ping\n");
+        printf("Ping\n");
         ThisThread::sleep_for(1s);
     }
 }
