@@ -1,5 +1,6 @@
 #include "mbed.h"
 #include "USBSerial.h"
+#include "USBAudio.h"
 
 DigitalOut led1(LED1);      // Onboard LED
 USBSerial serial(false);    // Non-blocking
@@ -20,6 +21,8 @@ void onTick(void) {
 int main()
 {
     t.attach(&onTick,200ms);      // periodically call the onTick function
+
+    //USBAudio audio(true, 48000, 2, 48000, 2);
 
     printf("This is a USB serial example on Mbed OS %d.%d.%d.\n", MBED_MAJOR_VERSION, MBED_MINOR_VERSION, MBED_PATCH_VERSION);
 

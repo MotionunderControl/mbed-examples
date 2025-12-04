@@ -3,14 +3,115 @@
         "inherits": [
             "MCU_STM32F103x8"
         ],
-        "macros_add": [
-            "STM32F103C8"
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_XTAL"
+        },
+        "device_has_add": [
+            "USBDEVICE"
+        ],
+        "device_name": "STM32F103C8"
+    },
+    "BLUEPILL_F103C8": {
+        "inherits": [
+            "MCU_STM32F103x8"
+        ],
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_XTAL | USE_PLL_HSI",
+            "rtc_clock_source": "USE_RTC_CLK_LSE_OR_LSI",
+            "lse_available": 1,
+            "default-adc-vref": "3.3f"
+        },
+        "device_has_add": [
+            "USBDEVICE"
+        ],
+        "mbed_rom_start": "0x08000000",
+        "mbed_rom_size": "0x20000",
+        "mbed_ram_start": "0x20000000",
+        "mbed_ram_size": "0x5000",
+        "detect_code": [
+            "1234"
+        ],
+        "device_name": "STM32F103C8Tx"
+    },
+    "BLACKPILL_F411CE": {
+        "inherits": [
+            "MCU_STM32F411xE"
+        ],
+        "config": {
+            "hse_value": {
+                "help": "Explicit HSE value (25MHz)",
+                "value": "25000000",
+                "macro_name": "HSE_VALUE"
+            }
+        },
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_XTAL | USE_PLL_HSI",
+            "rtc_clock_source": "USE_RTC_CLK_LSE_OR_LSI",
+            "lse_available": 1,
+            "default-adc-vref": "3.3f"
+        },
+        "detect_code": [
+            "1234"
         ],
         "device_has_add": [
             "USBDEVICE"
         ],
-        "target.clock_source": "USE_PLL_HSE_XTAL",
-        "target.clock_source_usb": "1",
-        "device_name": "STM32F103C8"
+        "device_name": "STM32F411CEUx"
+    },
+    "BLACKPILL_F401CC": {
+        "inherits": [
+            "MCU_STM32F4"
+        ],
+        "extra_labels_add": [
+            "STM32F401xC"
+        ],
+        "macros_add": [
+            "STM32F401xC"
+        ],
+        "config": {
+            "hse_value": {
+                "help": "Explicit HSE value (25MHz)",
+                "value": "25000000",
+                "macro_name": "HSE_VALUE"
+            }
+        },
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_XTAL | USE_PLL_HSI",
+            "rtc_clock_source": "USE_RTC_CLK_LSE_OR_LSI",
+            "lse_available": 1,
+            "default-adc-vref": "3.3f"
+        },
+        "detect_code": [
+            "1234"
+        ],
+        "device_has_add": [
+            "USBDEVICE"
+        ],
+        "device_name": "STM32F401CCUx"
+    },
+    "BLACKPILL_F401CE": {
+        "inherits": [
+            "MCU_STM32F401xE"
+        ],
+        "config": {
+            "hse_value": {
+                "help": "Explicit HSE value (25MHz)",
+                "value": "25000000",
+                "macro_name": "HSE_VALUE"
+            }
+        },
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_XTAL | USE_PLL_HSI",
+            "rtc_clock_source": "USE_RTC_CLK_LSE_OR_LSI",
+            "lse_available": 1,
+            "default-adc-vref": "3.3f"
+        },
+        "detect_code": [
+            "1234"
+        ],
+        "device_has_add": [
+            "USBDEVICE"
+        ],
+        "device_name": "STM32F401CEUx"
     }
 }
